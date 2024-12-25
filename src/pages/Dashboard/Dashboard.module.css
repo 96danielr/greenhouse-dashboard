@@ -1,0 +1,18 @@
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Ocupa toda la pantalla */
+  }
+  
+  .content {
+    display: flex;
+    flex: 1; /* Ocupa el resto del espacio debajo del AppBar */
+  }
+  
+  .main {
+    flex: 1; /* Se ajusta al tamaño del contenedor */
+    padding: 20px;
+    overflow: auto; /* Asegura que el contenido sea desplazable si es necesario */
+    background: #F8F1FF;
+  }
+  
