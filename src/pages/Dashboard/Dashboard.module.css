@@ -14,5 +14,29 @@
     padding: 20px;
     overflow: auto; /* Asegura que el contenido sea desplazable si es necesario */
     background: #F8F1FF;
+    padding: 120px 60px;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between; /* Espacia los elementos hacia los extremos */
+    align-items: center; /* Alinea verticalmente */
+    margin-bottom: 20px; /* Espacio debajo de la fila */
+  }
+  
+  .greeting h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .greeting p {
+    margin: 0;
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .search {
+    max-width: 400px; /* Opcional: Limitar el ancho del contenedor de búsqueda */
+    flex-shrink: 0;
   }
   

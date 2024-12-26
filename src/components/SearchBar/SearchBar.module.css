@@ -1,0 +1,17 @@
+.searchBar {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre el input y el botón */
+  }
+  
+  .input {
+    flex: 1; /* El input ocupa todo el espacio disponible */
+    border-radius: 28px !important;
+  }
+  
+  .button {
+    white-space: nowrap; /* Asegura que el texto no se corte */
+    border-radius: 28px;
+
+  }
+  
