@@ -1,17 +1,51 @@
 .searchBar {
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Espacio entre el input y el botón */
-  }
-  
-  .input {
-    flex: 1; /* El input ocupa todo el espacio disponible */
-    border-radius: 28px !important;
-  }
-  
-  .button {
-    white-space: nowrap; /* Asegura que el texto no se corte */
-    border-radius: 28px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  border-radius: 32px;
+}
 
-  }
-  
+.input {
+  flex: 1;
+  border-radius: 28px;
+  background-color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  box-shadow: none;
+  height: 44px;
+}
+
+.input:focus {
+  outline: none;
+  box-shadow: 0 0 4px rgba(100, 100, 250, 0.4);
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3f51b5;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button-icon {
+  font-size: 20px;
+}

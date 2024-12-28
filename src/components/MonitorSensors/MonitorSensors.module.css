@@ -1,0 +1,16 @@
+.card {
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    height: 100%;
+  }
+  
+  .sensorGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Espaciado entre elementos */
+    border-radius: 8px;
+    padding: 16px;
+  }
+  

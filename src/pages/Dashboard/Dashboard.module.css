@@ -1,42 +1,44 @@
 .dashboard {
-    display: flex;
-    flex-direction: column;
-    height: 100vh; /* Ocupa toda la pantalla */
-  }
-  
-  .content {
-    display: flex;
-    flex: 1; /* Ocupa el resto del espacio debajo del AppBar */
-  }
-  
-  .main {
-    flex: 1; /* Se ajusta al tamaño del contenedor */
-    padding: 20px;
-    overflow: auto; /* Asegura que el contenido sea desplazable si es necesario */
-    background: #F8F1FF;
-    padding: 120px 60px;
-  }
-  
-  .row {
-    display: flex;
-    justify-content: space-between; /* Espacia los elementos hacia los extremos */
-    align-items: center; /* Alinea verticalmente */
-    margin-bottom: 20px; /* Espacio debajo de la fila */
-  }
-  
-  .greeting h1 {
-    margin: 0;
-    font-size: 24px;
-  }
-  
-  .greeting p {
-    margin: 0;
-    font-size: 16px;
-    color: #666;
-  }
-  
-  .search {
-    max-width: 400px; /* Opcional: Limitar el ancho del contenedor de búsqueda */
-    flex-shrink: 0;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Ocupa toda la pantalla */
+}
+
+.content {
+  display: flex;
+  flex: 1; /* Se ajusta al espacio restante después del AppBar */
+}
+
+.main {
+  flex: 1; /* Ocupa todo el espacio disponible para el contenido principal */
+  padding: 20px;
+  overflow: auto; /* Asegura que el contenido sea desplazable si es necesario */
+  background-color: #F8F1FF; /* Fondo claro */
+  padding: 120px 60px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between; /* Espacio entre saludo y barra de búsqueda */
+  align-items: center; /* Alinea verticalmente */
+  margin-bottom: 20px; /* Espaciado inferior */
+}
+
+.greeting h1 {
+  margin: 0;
+  font-size: 32px; /* Tamaño más grande para el encabezado */
+  color: #1A1A60; /* Azul oscuro */
+  font-weight: bolder; /* Negrita para mayor énfasis */
+}
+
+.greeting p {
+  margin: 8px 0 0 0; /* Espaciado superior ligero */
+  font-size: 16px;
+  color: #2A4B87; /* Azul claro */
+  font-weight: 600; /* Peso medio para el subtítulo */
+}
+.search {
+
+  flex-shrink: 0; 
+  min-width: 40%
+}

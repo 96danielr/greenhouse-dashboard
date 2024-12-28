@@ -1,0 +1,26 @@
+.card {
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    margin-top: 20px;
+  }
+  
+  .switchContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .settingsLink {
+    color: #1976d2; /* Azul principal */
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .settingsLink:hover {
+    text-decoration: underline;
+  }
+  

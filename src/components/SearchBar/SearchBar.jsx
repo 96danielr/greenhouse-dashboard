@@ -1,19 +1,30 @@
 import React from 'react';
-import { TextField, Button } from '@mui/material';
+import { TextField } from '@mui/material';
+import { Search as SearchIcon } from '@mui/icons-material';
 import styles from './SearchBar.module.css';
 
 const SearchBar = () => {
   return (
     <div className={styles.searchBar}>
       <TextField
-        variant="outlined"
+        variant="standard"
         placeholder="Search for specific data"
-        size="small"
+        InputProps={{
+          disableUnderline: true,
+          style: {
+            borderRadius: '28px',
+            padding: '12px 20px',
+            backgroundColor: 'white',
+            boxShadow: 'none',
+            fontSize: '16px',
+            height: '44px',
+          },
+        }}
         className={styles.input}
       />
-      <Button variant="contained" color="primary" className={styles.button}>
-        Search
-      </Button>
+      <button className={styles.button}>
+        <SearchIcon className={styles['button-icon']} />
+      </button>
     </div>
   );
 };
