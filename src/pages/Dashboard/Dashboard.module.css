@@ -1,44 +1,66 @@
 .dashboard {
   display: flex;
   flex-direction: column;
-  height: 100vh; /* Ocupa toda la pantalla */
+  min-height: 100vh;
+  padding-top: 100px;
+  background-color: #F8F1FF;
 }
 
-.content {
+/* Contenedor para sidebar y main */
+.container {
   display: flex;
-  flex: 1; /* Se ajusta al espacio restante después del AppBar */
+  flex: 1;
+  position: relative;
 }
 
+/* MAIN */
 .main {
-  flex: 1; /* Ocupa todo el espacio disponible para el contenido principal */
-  padding: 20px;
-  overflow: auto; /* Asegura que el contenido sea desplazable si es necesario */
-  background-color: #F8F1FF; /* Fondo claro */
-  padding: 120px 60px;
+  flex: 1;
+  padding: 16px; /* Padding por defecto */
+  margin-left: 0;
+  transition: margin-left 0.3s ease-in-out;
 }
 
+.mainShift {
+  margin-left: 350px;
+}
+
+/* Fila del "Hi Elsa" + SearchBar */
 .row {
   display: flex;
-  justify-content: space-between; /* Espacio entre saludo y barra de búsqueda */
-  align-items: center; /* Alinea verticalmente */
-  margin-bottom: 20px; /* Espaciado inferior */
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
 }
 
 .greeting h1 {
   margin: 0;
-  font-size: 32px; /* Tamaño más grande para el encabezado */
-  color: #1A1A60; /* Azul oscuro */
-  font-weight: bolder; /* Negrita para mayor énfasis */
 }
 
-.greeting p {
-  margin: 8px 0 0 0; /* Espaciado superior ligero */
-  font-size: 16px;
-  color: #2A4B87; /* Azul claro */
-  font-weight: 600; /* Peso medio para el subtítulo */
-}
 .search {
+  width: 250px;
+}
 
-  flex-shrink: 0; 
-  min-width: 40%
+.card {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main {
+    padding: 12px; /* Padding reducido en móviles */
+  }
+  
+  .mainShift {
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main {
+    padding: 40px; /* Más padding en pantallas grandes */
+  }
 }

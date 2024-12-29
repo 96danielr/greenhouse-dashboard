@@ -1,10 +1,12 @@
 .card {
-    padding: 16px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #ffffff;
-    height: 100%;
-  }
+ 
+  border-radius: 8px !important; /* Bordes más redondeados */
+  background-color: #ffffff; /* Fondo blanco */
+  padding-top: 10px;
+  padding-bottom: 25px;
+  border: none !important; /* Añadimos un borde claro para separar */
+  box-shadow: none !important; /* Eliminamos la sombra */
+}
   
   .sensorGroup {
     display: flex;

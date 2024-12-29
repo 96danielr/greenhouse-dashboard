@@ -1,8 +1,31 @@
+/* ./components/Sidebar/Sidebar.module.css */
+
+/* Por defecto, ocultamos el Sidebar por la izquierda (fuera de la pantalla). */
 .sidebar {
-    width: 350px; /* Ancho del Sidebar */
-    background-color: #ffffff;
-    padding: 16px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    padding-top: 100px;
+  width: 350px;
+  background-color: #ffffff;
+  padding: 16px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  padding-top: 100px;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(-100%); /* sidebar escondido */
+  position: fixed; /* Fijo, para que se superponga al contenido */
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 1000; /* Que quede arriba del contenido */
+}
+
+/* Cuando el Sidebar está abierto, se muestra en pantalla. */
+.sidebarOpen {
+  transform: translateX(0);
+}
+
+/* Responsive: en pantallas más pequeñas, 
+   podrías hacer que sea full-width o un porcentaje. */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 80%;
+    max-width: 300px; /* Ajusta si prefieres un máximo */
   }
-  
+}

@@ -1,27 +1,37 @@
-.listContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 10px; /* Espaciado entre los elementos */
-  }
-  
-  .card {
-    padding: 8px;
-    border-radius: 2px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
-    background-color: #ffffff;
-  }
-  
-  .listItem {
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Espaciado entre el ícono y el texto */
-  }
-  
-  .icon {
-    color: #4caf50; /* Color verde para ítems activos */
-  }
-  
-  .inactive {
-    color: #9e9e9e; /* Color gris para ítems inactivos */
-  }
-  
+.card {
+
+  border-radius: 8px !important; /* Bordes más redondeados */
+  background-color: #ffffff; /* Fondo blanco */
+ 
+  border: none !important; /* Añadimos un borde claro para separar */
+  box-shadow: none !important; /* Eliminamos la sombra */
+}
+.icon {
+  font-size: 24px;
+  margin-right: 8px; /* Espacio entre el ícono y el texto */
+}
+
+.name {
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 8px;
+  color: #333; /* Color oscuro por defecto */
+}
+
+.active {
+  color: #333; /* Oscuro para ítems activos */
+}
+
+.inactive {
+  color: #d9534f; /* Rojo discreto para inactivos */
+}
+
+.delayed {
+  color: #ffc107; /* Amarillo para retrasos */
+}
+
+.stateIcon {
+  font-size: 20px;
+  color: inherit; /* Hereda el color del estado */
+  margin-left: auto; /* Alinea el ícono de estado a la derecha */
+}

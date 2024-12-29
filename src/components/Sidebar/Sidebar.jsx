@@ -1,14 +1,18 @@
+// ./components/Sidebar/Sidebar.jsx
 import React from 'react';
 import { List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import SettingsIcon from '@mui/icons-material/Settings';
 import ContactSupportIcon from '@mui/icons-material/ContactSupport';
+
 import styles from './Sidebar.module.css';
 
-const Sidebar = () => {
+const Sidebar = ({ isOpen }) => {
   return (
-    <aside className={styles.sidebar}>
+    <aside
+      className={`${styles.sidebar} ${isOpen ? styles.sidebarOpen : ''}`}
+    >
       <List>
         <ListItem button>
           <ListItemIcon>

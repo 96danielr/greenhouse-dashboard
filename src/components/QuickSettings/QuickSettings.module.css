@@ -1,26 +1,39 @@
 .card {
-    padding: 16px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #ffffff;
-    margin-top: 20px;
-  }
-  
-  .switchContainer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 10px;
-  }
-  
-  .settingsLink {
-    color: #1976d2; /* Azul principal */
-    font-weight: bold;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  .settingsLink:hover {
-    text-decoration: underline;
-  }
-  
+  padding: 16px;
+  border-radius: 8px !important; /* Bordes más redondeados */
+  background-color: #ffffff; /* Fondo blanco */
+  margin-top: 20px;
+  border: none !important; /* Añadimos un borde claro para separar */
+  box-shadow: none !important; /* Eliminamos la sombra */
+}
+
+.switchContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.linkContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Alinea el texto a la izquierda y la flecha a la derecha */
+  cursor: pointer;
+}
+
+.linkText {
+  color: #1976d2;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.linkText:hover {
+  text-decoration: underline;
+}
+
+.arrowIcon {
+  font-size: 38px; /* Tamaño más grande para que sea visible */
+  color: #1976d2; /* Azul consistente con el texto */
+  font-weight: bold;
+  margin-right: 10px;
+}

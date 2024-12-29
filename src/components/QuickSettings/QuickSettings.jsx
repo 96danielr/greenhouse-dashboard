@@ -1,6 +1,7 @@
-import React from 'react';
-import { Card, CardContent, Typography, Switch, Link } from '@mui/material';
-import styles from './QuickSettings.module.css';
+import React from "react";
+import { Card, CardContent, Typography, Switch, Link } from "@mui/material";
+import EastIcon from "@mui/icons-material/East"; // Importamos un ícono de flecha más larga
+import styles from "./QuickSettings.module.css";
 
 const QuickSettings = () => {
   return (
@@ -13,9 +14,12 @@ const QuickSettings = () => {
           <Typography>Group Start</Typography>
           <Switch color="primary" />
         </div>
-        <Link href="#" underline="hover" className={styles.settingsLink}>
-          Settings
-        </Link>
+        <div className={styles.linkContainer}>
+          <Link href="#" underline="none" className={styles.linkText}>
+            Settings
+          </Link>
+          <EastIcon className={styles.arrowIcon} /> {/* Ícono de flecha más larga */}
+        </div>
       </CardContent>
     </Card>
   );
