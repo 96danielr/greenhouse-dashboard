@@ -1,6 +1,5 @@
 import { faker } from "@faker-js/faker";
 
-// Generador de datos simulados para el dashboard
 export const generateMockData = () => {
   return {
     user: {
@@ -26,5 +25,12 @@ export const generateMockData = () => {
       }),
       zone: faker.helpers.arrayElement(["A1", "A2", "B1", "B2"]),
     })),
+    fertilizerStock: [
+      { label: "Special", percentage: faker.number.int({ min: 40, max: 90 }), color: "#FFD700" },
+      { label: "A1", percentage: faker.number.int({ min: 40, max: 90 }), color: "#9ACD32" },
+      { label: "A2", percentage: faker.number.int({ min: 40, max: 90 }), color: "#9ACD32" },
+      { label: "B1", percentage: faker.number.int({ min: 40, max: 90 }), color: "#1E90FF" },
+      { label: "B2", percentage: faker.number.int({ min: 40, max: 90 }), color: "#4682B4" },
+    ],
   };
 };

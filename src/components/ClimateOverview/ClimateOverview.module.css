@@ -3,13 +3,14 @@
   border-radius: 18px;
   background-color: #ffffff;
   height: 100%;
-  border: 1px solid #e0e0e0;
+  border: none !important;
 }
 
 .content {
   display: flex;
   align-items: center;
   gap: 16px;
+  border: none !important;  
 }
 
 .iconBox {
@@ -17,41 +18,29 @@
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  background-color: #ffeb3b; /* Fondo amarillo */
+  background-color: #ffeb3b;
   border-radius: 12px;
   padding: 16px;
-  width: 120px; /* Tamaño fijo para consistencia */
-  text-align: center;
 }
 
-.iconBackground {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #ffc107; /* Amarillo más oscuro para el círculo */
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-}
-
-.sunIcon {
+.icon {
   font-size: 32px;
-  color: #1976d2; /* Azul del ícono */
+  color: #1976d2;
 }
 
 .text {
   font-size: 14px;
-  font-weight: bold;
-  color: #1e2150; /* Azul oscuro */
+  color: #070C3F;
 }
 
 .stat {
   font-size: 20px;
   font-weight: bold;
-  color: #1e2150;
+  color: #333;
 }
 
 .graph {
   flex: 1;
   height: 150px;
+  min-width: 250px; /* Garantiza que el gráfico tenga un ancho mínimo */
 }

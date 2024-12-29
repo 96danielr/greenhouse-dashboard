@@ -15,7 +15,11 @@
   padding: 12px 20px;
   font-size: 16px;
   box-shadow: none;
-  height: 44px;
+  height: 54px;
+}
+.input ::placeholder{
+  align-content: center;
+  color: #1A1A60 !important; 
 }
 
 .input:focus {
@@ -27,7 +31,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #3f51b5;
+  background-color: #1A1A60;
   color: white;
   border: none;
   border-radius: 50%;

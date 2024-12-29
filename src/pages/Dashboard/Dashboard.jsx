@@ -68,7 +68,7 @@ function Dashboard() {
           {/* Tercera fila */}
           <Grid container spacing={3}>
             <Grid item xs={12} md={4}>
-            <FarmsList farms={data.farms} />
+              <FarmsList farms={data.farms} />
               <QuickSettings />
             </Grid>
             <Grid item xs={12} md={8}>
@@ -80,12 +80,15 @@ function Dashboard() {
           <Grid container spacing={3} style={{ marginTop: "20px" }}>
             <Grid item xs={12} md={7}>
               <div className={styles.card}>
-              <ClimateOverview climateData={data.climateOverview} />
+                <ClimateOverview climateData={data.climateOverview} />
               </div>
             </Grid>
             <Grid item xs={12} md={5}>
               <div className={styles.card}>
-                <FertiOverview />
+                <FertiOverview
+                  fertilizations={data.nextFertilizations}
+                  stockData={data.fertilizerStock}
+                />
               </div>
             </Grid>
           </Grid>
