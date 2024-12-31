@@ -17,9 +17,12 @@
   box-shadow: none;
   height: 54px;
 }
-.input ::placeholder{
-  align-content: center;
-  color: #1A1A60 !important; 
+.input::placeholder {
+  color: #1A1A60 !important; /* Cambia el color */
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 54px; /* Centrado vertical */
 }
 
 .input:focus {

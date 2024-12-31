@@ -6,7 +6,6 @@ import {
   List,
   ListItem,
   ListItemIcon,
-  ListItemText,
 } from "@mui/material";
 import AgricultureIcon from "@mui/icons-material/Agriculture";
 import GrassIcon from "@mui/icons-material/Grass";
@@ -18,7 +17,6 @@ import InfoIcon from "@mui/icons-material/Info";
 import ErrorOutlineIcon from "@mui/icons-material/ErrorOutline";
 import styles from "./FarmsList.module.css";
 
-// Lista de íconos aleatorios
 const farmIcons = [
   AgricultureIcon,
   GrassIcon,
@@ -28,7 +26,6 @@ const farmIcons = [
 ];
 
 const FarmsList = ({ farms }) => {
-  // Función para obtener un ícono aleatorio
   const getRandomIcon = () => {
     const Icon = farmIcons[Math.floor(Math.random() * farmIcons.length)];
     return <Icon />;
@@ -37,19 +34,11 @@ const FarmsList = ({ farms }) => {
   return (
     <Card className={styles.card}>
       <CardContent>
-        <Typography variant="h6" gutterBottom>
+        <Typography variant="h6" className={styles.title}>
           Your Farms (GSC Tabs)
         </Typography>
         <List className={styles.listContainer}>
           {farms.map((farm, index) => {
-            // Determinamos clase y estado dinámico
-            const statusClass =
-              farm.status === "Active"
-                ? styles.active
-                : farm.status === "On delay"
-                ? styles.delayed
-                : styles.inactive;
-
             const stateIcon =
               farm.status === "Active" ? (
                 <CheckCircleIcon className={styles.stateIcon} />
@@ -60,17 +49,21 @@ const FarmsList = ({ farms }) => {
               );
 
             return (
-              <ListItem key={index} className={styles.listItem}>
-                {/* Ícono y nombre de la finca */}
-                <div style={{ display: "flex", alignItems: "center" }}>
-                  <ListItemIcon className={`${styles.icon} ${statusClass}`}>
-                    {getRandomIcon()} {/* Ícono aleatorio */}
+              <ListItem
+                key={index}
+                className={styles.listItem}
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                }}
+              >
+                <div style={{ display: "flex", alignItems: "start"}}>
+                  <ListItemIcon className={styles.icon}>
+                    {getRandomIcon()}
                   </ListItemIcon>
-                  <Typography className={`${styles.name} ${statusClass}`}>
-                    {farm.name}
-                  </Typography>
+                  <Typography className={styles.name}>{farm.name}</Typography>
                 </div>
-                {/* Estado de la finca */}
                 {stateIcon}
               </ListItem>
             );

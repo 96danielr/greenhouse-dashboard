@@ -1,10 +1,9 @@
-// ./components/Sidebar/Sidebar.jsx
 import React from 'react';
 import { List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
-import DashboardIcon from '@mui/icons-material/Dashboard';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import SettingsIcon from '@mui/icons-material/Settings';
-import ContactSupportIcon from '@mui/icons-material/ContactSupport';
+import DashboardOutlinedIcon from '@mui/icons-material/DashboardOutlined';
+import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
+import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
+import ContactSupportOutlinedIcon from '@mui/icons-material/ContactSupportOutlined';
 
 import styles from './Sidebar.module.css';
 
@@ -13,32 +12,34 @@ const Sidebar = ({ isOpen }) => {
     <aside
       className={`${styles.sidebar} ${isOpen ? styles.sidebarOpen : ''}`}
     >
-      <List>
-        <ListItem button>
-          <ListItemIcon>
-            <DashboardIcon />
-          </ListItemIcon>
-          <ListItemText primary="Dashboard" />
-        </ListItem>
-        <ListItem button>
-          <ListItemIcon>
-            <AccountCircleIcon />
-          </ListItemIcon>
-          <ListItemText primary="Profile" />
-        </ListItem>
-        <ListItem button>
-          <ListItemIcon>
-            <SettingsIcon />
-          </ListItemIcon>
-          <ListItemText primary="Parameters" />
-        </ListItem>
-        <ListItem button>
-          <ListItemIcon>
-            <ContactSupportIcon />
-          </ListItemIcon>
-          <ListItemText primary="Contact" />
-        </ListItem>
-      </List>
+      <div>
+        <List>
+          <ListItem button>
+            <ListItemIcon>
+              <DashboardOutlinedIcon />
+            </ListItemIcon>
+            <ListItemText primary="Dashboard" />
+          </ListItem>
+          <ListItem button>
+            <ListItemIcon>
+              <AccountCircleOutlinedIcon />
+            </ListItemIcon>
+            <ListItemText primary="Profile" />
+          </ListItem>
+          <ListItem button>
+            <ListItemIcon>
+              <SettingsOutlinedIcon />
+            </ListItemIcon>
+            <ListItemText primary="Parameters" />
+          </ListItem>
+          <ListItem button>
+            <ListItemIcon>
+              <ContactSupportOutlinedIcon />
+            </ListItemIcon>
+            <ListItemText primary="Contact" />
+          </ListItem>
+        </List>
+      </div>
     </aside>
   );
 };

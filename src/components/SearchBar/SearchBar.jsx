@@ -7,21 +7,30 @@ const SearchBar = () => {
   return (
     <div className={styles.searchBar}>
       <TextField
-        variant="standard"
-        placeholder="Search for specific data"
-        InputProps={{
-          disableUnderline: true,
-          style: {
-            borderRadius: '28px',
-            padding: '12px 20px',
-            backgroundColor: 'white',
-            boxShadow: 'none',
-            fontSize: '16px',
-            height: '44px',
-          },
-        }}
-        className={styles.input}
-      />
+  variant="standard"
+  placeholder="Search for specific data"
+  InputProps={{
+    disableUnderline: true,
+    style: {
+      borderRadius: '28px',
+      padding: '12px 20px',
+      backgroundColor: 'white',
+      boxShadow: 'none',
+      fontSize: '16px',
+      height: '54px',
+    },
+    classes: {
+      input: {
+        '&::placeholder': {
+          color: '#1A1A60',
+          lineHeight: '54px', // Alineación vertical
+        },
+      },
+    },
+  }}
+  className={styles.input}
+/>
+
       <button className={styles.button}>
         <SearchIcon className={styles['button-icon']} />
       </button>

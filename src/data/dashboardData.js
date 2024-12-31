@@ -32,5 +32,19 @@ export const generateMockData = () => {
       { label: "B1", percentage: faker.number.int({ min: 40, max: 90 }), color: "#1E90FF" },
       { label: "B2", percentage: faker.number.int({ min: 40, max: 90 }), color: "#4682B4" },
     ],
+    sensors: {
+        left: [
+          { name: "Compart", stat: `${faker.number.int({ min: 100, max: 500 })}x`, color: "#c8f7c5", icon: "🏠" },
+          { name: "Vents", stat: "Settings", color: "#c8f7c5", isSwitch: true, icon: "🌬️" },
+        ],
+        right: [
+          { name: "Meteo", stat: `${faker.number.int({ min: 100, max: 500 })}x`, color: "#ffe6a5", icon: "🌦️" },
+          { name: "Irrigation Unit", stat: `${faker.number.int({ min: 100, max: 500 })}x`, color: "#ffe6a5", icon: "💧" },
+          { name: "Inputs", stat: `${faker.number.int({ min: 100, max: 500 })}x`, color: "#ffe6a5", icon: "📥" },
+          { name: "Events", stat: `${faker.number.int({ min: 100, max: 500 })}x`, color: "#ffe6a5", icon: "📅" },
+        ],
+        waterHeat: { name: "Water Heat", stat: "12°", color: "#ffcccb", extra: "Min   Max", icon: "🔥" },
+        valves: { name: "Valves", stat: "Manual", color: "#d9eaf5", extra: "G.H", icon: "🔧" },
+      },
   };
 };

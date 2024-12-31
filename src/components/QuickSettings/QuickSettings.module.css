@@ -7,6 +7,13 @@
   box-shadow: none !important; /* Eliminamos la sombra */
 }
 
+.title{
+  font-size: 1rem !important;
+  font-weight: bold !important;
+  color: #171C4B !important;
+  margin-bottom: 15px !important;
+}
+
 .switchContainer {
   display: flex;
   align-items: center;

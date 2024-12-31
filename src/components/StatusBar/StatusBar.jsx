@@ -25,17 +25,11 @@ const StatusBar = ({ statuses }) => {
             />
           )}
           {status.label === "On delay" && (
-            <InfoIcon
-              className={styles.icon}
-              style={{ color: status.color }}
-            />
+            <InfoIcon className={styles.icon} style={{ color: status.color }} />
           )}
           {/* Texto y conteo */}
-          <Typography variant="body1">{status.label}</Typography>
-          <Box
-            className={styles.count}
-            sx={{ backgroundColor: status.color }}
-          >
+          <Typography variant="body2"  style={{ fontWeight: 700 }}>{status.label}</Typography>
+          <Box className={styles.count} sx={{ backgroundColor: status.color }}>
             {status.count}
           </Box>
         </Box>

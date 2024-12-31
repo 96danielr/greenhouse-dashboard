@@ -1,37 +1,76 @@
 .card {
-
-  border-radius: 8px !important; /* Bordes más redondeados */
-  background-color: #ffffff; /* Fondo blanco */
- 
-  border: none !important; /* Añadimos un borde claro para separar */
-  box-shadow: none !important; /* Eliminamos la sombra */
+  border-radius: 8px !important;
+  background-color: #ffffff;
+  border: none !important;
+  box-shadow: none !important;
 }
+
 .icon {
   font-size: 24px;
-  margin-right: 8px; /* Espacio entre el ícono y el texto */
+  margin-right: 0px;
+  color: #2A4B87;
+  transition: color 0.3s ease;
+}
+
+.title {
+  font-size: 1rem !important;
+  font-weight: bold !important;
+  color: #171C4B !important;
+  margin-bottom: 15px !important;
 }
 
 .name {
-  font-size: 16px;
+  font-size: 1re;
   font-weight: 600;
-  margin-left: 8px;
-  color: #333; /* Color oscuro por defecto */
+  margin-left: 0;
+  color: #2A4B87;
+  transition: color 0.3s ease;
 }
 
 .active {
-  color: #333; /* Oscuro para ítems activos */
+  color: #2A4B87;
 }
 
 .inactive {
-  color: #d9534f; /* Rojo discreto para inactivos */
+  color: #2A4B87;
 }
 
 .delayed {
-  color: #ffc107; /* Amarillo para retrasos */
+  color: #2A4B87;
 }
 
 .stateIcon {
   font-size: 20px;
-  color: inherit; /* Hereda el color del estado */
-  margin-left: auto; /* Alinea el ícono de estado a la derecha */
+  color: #2A4B87;
+  margin-left: auto;
+  transition: color 0.3s ease;
+}
+
+.listItem {
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #2A4B87;
+  transition: color 0.3s ease;
+  
+}
+
+.listItem .icon, .listItem .name, .listItem .stateIcon {
+  color: #2A4B87;
+  transition: color 0.3s ease;
+}
+
+.listItem:hover, .listItem:hover .icon, .listItem:hover .name, .listItem:hover .stateIcon {
+  color: #1572FD;
+  cursor: pointer;
+}
+
+.listItem:nth-child(1),
+.listItem:nth-child(2) {
+  border-bottom: 1px solid #ddd;
+}
+
+.listItem:nth-child(3) {
+  border-bottom: none;
 }

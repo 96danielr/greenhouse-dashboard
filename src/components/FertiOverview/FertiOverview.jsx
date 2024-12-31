@@ -5,8 +5,8 @@ import styles from "./FertiOverview.module.css";
 const FertiOverview = ({ fertilizations, stockData }) => {
   return (
     <Card className={styles.card}>
-      <CardContent>
-        <Typography variant="h6" gutterBottom>
+      
+        <Typography variant="h6" className={styles.title}>
           Ferti Overview
         </Typography>
         <Box className={styles.content}>
@@ -63,7 +63,7 @@ const FertiOverview = ({ fertilizations, stockData }) => {
             </Box>
           </Box>
         </Box>
-      </CardContent>
+      
     </Card>
   );
 };

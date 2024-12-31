@@ -1,18 +1,46 @@
 .card {
- 
-  border-radius: 8px !important; /* Bordes más redondeados */
-  background-color: #ffffff; /* Fondo blanco */
-  padding-top: 10px;
-  padding-bottom: 25px;
-  border: none !important; /* Añadimos un borde claro para separar */
-  box-shadow: none !important; /* Eliminamos la sombra */
+  border-radius: 8px;
+  background-color: #ffffff;
+  padding: 16px;
+  box-shadow: none !important;
 }
-  
-  .sensorGroup {
-    display: flex;
-    flex-direction: column;
-    gap: 16px; /* Espaciado entre elementos */
-    border-radius: 8px;
-    padding: 16px;
-  }
-  
+
+.sensorGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-radius: 8px;
+  padding: 16px;
+}
+.title {
+  font-size: 1rem !important;
+  font-weight: bold !important;
+  color: #171C4B !important;
+  margin-bottom: 15px !important;
+}
+
+.sensorItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sensorName {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon {
+  font-size: 18px;
+}
+
+.stat {
+  font-weight: bold;
+  font-size: 16px;
+  color: #333333;
+}

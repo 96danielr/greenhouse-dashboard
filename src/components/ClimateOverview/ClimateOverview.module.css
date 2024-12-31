@@ -4,6 +4,8 @@
   background-color: #ffffff;
   height: 100%;
   border: none !important;
+  box-shadow: none !important;
+
 }
 
 .content {
@@ -11,8 +13,14 @@
   align-items: center;
   gap: 16px;
   border: none !important;  
-}
 
+}
+.title{
+  font-size: 1rem !important;
+  font-weight: bold !important;
+  color: #171C4B !important;
+  margin-bottom: 15px !important;
+}
 .iconBox {
   display: flex;
   flex-direction: column;
@@ -22,20 +30,30 @@
   border-radius: 12px;
   padding: 16px;
 }
+.iconBoxTwo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  background-color: #ffeb3b;
+  border-radius: 12px;
+  padding: 16px;
+  font-size: 1rem;
+}
 
 .icon {
-  font-size: 32px;
+  font-size: 1rem !important;
   color: #1976d2;
 }
 
 .text {
-  font-size: 14px;
+  font-size: 1rem !important;
   color: #070C3F;
 }
 
 .stat {
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 1rem !important;
+  font-weight: 600;
   color: #333;
 }
 

@@ -2,9 +2,10 @@
   padding: 16px;
   border-radius: 18px;
   background-color: #ffffff;
-  height: 100%;
+  
   border: none;
   box-shadow: none !important;
+ 
 }
 
 .content {
@@ -18,17 +19,24 @@
   }
 }
 
+.title {
+  font-size: 1rem !important;
+  font-weight: bold !important;
+  color: #171C4B !important;
+  margin-bottom: 15px !important;
+}
+
 .nextFertilizations {
   display: flex;
   flex-direction: column;
   background-color: #8CDDAF; /* Verde claro */
   border-radius: 12px;
-  padding: 16px;
+ 
   flex: 1;
 }
 
 .sectionTitle {
-  font-size: 18px !important;
+  font-size: 1rem !important;
   font-weight: bold !important;
   color: #ffffff;
   margin-bottom: 6px !important;
@@ -61,14 +69,10 @@
   background-color: #ffffff; /* Línea vertical blanca */
 }
 
-.month {
-  font-size: 22px !important; /* Texto más grande */
-  font-weight: bold;
-  color: #ffffff;
-}
+
 
 .day {
-  font-size: 32px !important; /* Texto más grande */
+  font-size: 1.3rem !important; /* Texto más grande */
   font-weight: bold !important;
   color: #ffffff;
 }
@@ -157,6 +161,7 @@
   border-radius: 12px;
   padding: 16px;
   flex: 1;
+  max-width: 600px;
 }
 
 .sectionTitle {
@@ -194,20 +199,20 @@
 }
 
 .month {
-  font-size: 22px !important; /* Texto más grande */
+  font-size: 1.1rem !important; /* Texto más grande */
   font-weight: bold;
   color: #ffffff;
 }
 
 .day {
-  font-size: 32px !important; /* Texto más grande */
+  font-size: 1.9rem !important; /* Texto más grande */
   font-weight: bold !important;
   color: #ffffff;
 }
 
 .sectionTitle2{
   color : #8CDDAF;
-  font-size: 18px !important;
+  font-size: 1rem !important;
   font-weight: bold !important;
 }
 
@@ -225,6 +230,7 @@
   justify-content: space-between;
   gap: 16px;
   height: 120px; /* Altura total del contenedor */
+  
 }
 
 .mainLine {

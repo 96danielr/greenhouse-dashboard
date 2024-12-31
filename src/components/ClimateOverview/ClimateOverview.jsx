@@ -2,12 +2,13 @@ import React from "react";
 import { Card, CardContent, Typography, Box } from "@mui/material";
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from "recharts";
 import styles from "./ClimateOverview.module.css";
+import WbSunnyOutlinedIcon from '@mui/icons-material/WbSunnyOutlined';
 
 const ClimateOverview = ({ climateData }) => {
   return (
     <Card className={styles.card}>
-      <CardContent>
-        <Typography variant="h6" gutterBottom>
+      
+        <Typography variant="h6" className={styles.title}>
           Climate Overview
         </Typography>
         <Box
@@ -18,13 +19,16 @@ const ClimateOverview = ({ climateData }) => {
         >
           {/* Información de Light Intensity */}
           <Box className={styles.iconBox}>
-            <span className={styles.icon}>☀️</span>
-            <Typography variant="body2" className={styles.text}>
+          <Typography variant="body1" className={styles.text}>
               Light Intensity
             </Typography>
+            <Box className={styles.iconBoxTwo}>
+              <WbSunnyOutlinedIcon/>
+           
             <Typography variant="h6" className={styles.stat}>
               {climateData.lightIntensity}
             </Typography>
+            </Box>
           </Box>
 
           {/* Gráfico */}
@@ -71,7 +75,7 @@ const ClimateOverview = ({ climateData }) => {
             </ResponsiveContainer>
           </Box>
         </Box>
-      </CardContent>
+      
     </Card>
   );
 };

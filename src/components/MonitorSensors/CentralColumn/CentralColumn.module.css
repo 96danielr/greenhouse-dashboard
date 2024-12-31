@@ -1,0 +1,78 @@
+.card {
+    padding: 16px;
+    border-radius: 12px;
+    background-color: #FFE5BF !important; /* Fondo anaranjado */
+    border: none;
+    box-shadow: none !important;
+    height: 100%;
+  }
+  
+  .container {
+    display: flex;
+    gap: 16px;
+    background-color: #FFE5BF !important; /* Fondo anaranjado */
+    height: 100%;
+    
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex: 1; /* Asegura que ambas columnas ocupen el mismo ancho */
+    height: 100%;
+
+  }
+  
+  .statBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 8px;
+    background-color: #FFE5BF !important; /* Fondo anaranjado */
+    border-radius: 8px;
+    box-shadow: none;
+    height: 100%;
+  }
+  
+  .titleRow {
+    display: flex;
+    align-items: center; /* Alinea el ícono y el texto verticalmente */
+    gap: 8px; /* Espaciado entre el ícono y el título */
+  }
+  
+  .icon {
+    color: #FFA500; /* Color del ícono */
+    font-size: 24px;
+  }
+  
+  .title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFA500;
+  }
+  
+  .valueRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Alinea los textos */
+  }
+  
+  .label {
+    font-size: 14px;
+    color: #333333;
+  }
+  
+  .value {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333333;
+  }
+  
+  /* Línea divisoria */
+  .divider {
+    width: 1px;
+    background-color: #FFA500; /* Color de la línea divisoria */
+    height: auto; /* Ocupa todo el alto del contenedor */
+  }
+  

@@ -13,11 +13,11 @@ const GreetingSearch = ({ user }) => {
         justifyContent: 'space-between',
         alignItems: 'center',
         marginBottom: 2,
-        flexDirection: { xs: 'column', md: 'row' },
+        flexDirection: { xs: 'column', md: 'column' , lg: "row"},
       }}
     >
       <Box className={styles.greeting}>
-        <Typography variant="h4" component="h1" className={styles.heading}>
+        <Typography  component="h1" className={styles.heading}>
           Hi {user.name}
         </Typography>
         <Typography variant="body1" component="p">

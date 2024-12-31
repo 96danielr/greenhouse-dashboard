@@ -66,25 +66,89 @@ function Dashboard() {
           />
 
           {/* Tercera fila */}
-          <Grid container spacing={3}>
-            <Grid item xs={12} md={4}>
-              <FarmsList farms={data.farms} />
-              <QuickSettings />
+          <Grid
+            container
+            spacing={3}
+            style={{ display: "flex", alignItems: "stretch" }}
+          >
+            {/* Primera columna */}
+            <Grid
+              item
+              xs={12}
+              sm={12}
+              md={12}
+              lg={12}
+              xl={3}
+              style={{
+                display: "flex",
+                flexDirection: "column",
+              }}
+
+             
+              
+            >
+              <div style={{ flexGrow: 1 }}>
+                <FarmsList farms={data.farms} />
+              </div>
+              <div>
+                <QuickSettings />
+              </div>
             </Grid>
-            <Grid item xs={12} md={8}>
-              <MonitorSensors />
+            {/* Segunda columna */}
+            <Grid
+              item
+              xs={12}
+              lg={12}
+              xl={9}
+              
+              style={{
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              <div style={{ flexGrow: 1 }}>
+                <MonitorSensors sensors={data.sensors} />
+              </div>
             </Grid>
           </Grid>
 
           {/* Última fila */}
-          <Grid container spacing={3} style={{ marginTop: "20px" }}>
-            <Grid item xs={12} md={7}>
-              <div className={styles.card}>
+          <Grid
+            container
+            spacing={3}
+            style={{
+              marginTop: "20px",
+              display: "flex",
+              alignItems: "stretch",
+            }}
+          >
+            {/* Primera columna de la última fila */}
+            <Grid
+              item
+              xs={12}
+              md={12}
+              xl={6}
+              style={{
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              <div style={{ flexGrow: 1 }} className={styles.card}>
                 <ClimateOverview climateData={data.climateOverview} />
               </div>
             </Grid>
-            <Grid item xs={12} md={5}>
-              <div className={styles.card}>
+            {/* Segunda columna de la última fila */}
+            <Grid
+              item
+              xs={12}
+              md={12}
+              xl={6}
+              style={{
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              <div style={{ flexGrow: 1 }} className={styles.card}>
                 <FertiOverview
                   fertilizations={data.nextFertilizations}
                   stockData={data.fertilizerStock}

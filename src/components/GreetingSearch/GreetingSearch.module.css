@@ -10,22 +10,18 @@
   }
   
   .greeting h1 {
+    font-size: 2rem;
     margin: 0;
     color: #1A1A60;
-    font-weight: bolder;
+    font-weight: bold;
   }
   
   .search {
-    width: 250px;
+    width: 500px;
   }
   
-  @media (min-width: 1024px) {
-    .search {
-      width: 500px; /* Ancho mayor en pantallas grandes */
-    }
-  }
   
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) {
     .greetingRow {
       flex-direction: column;
       align-items: flex-start;
@@ -43,6 +39,7 @@
   
     .search {
       width: 100%;
+      max-width: 600px;
       margin-top: 16px;
     }
   }
