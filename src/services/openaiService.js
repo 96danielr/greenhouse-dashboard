@@ -1,4 +1,4 @@
-import apiConfig from "../config/apiConfig";
+
 
 export const fetchOpenAISummary = async (data) => {
   try {
@@ -6,7 +6,7 @@ export const fetchOpenAISummary = async (data) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${apiConfig.openaiApiKey}`,
+        Authorization: "Bearer sk-Xxeu9Kaz6VZQXPHByw3R1xLrXG6hi71HMiocP8Z3fPT3BlbkFJIsDsY4qcix8v_D-nn8UMYv4XHGXZcrrGLFkp-KQcoA",
       },
       body: JSON.stringify({
         model: "gpt-3.5-turbo",
