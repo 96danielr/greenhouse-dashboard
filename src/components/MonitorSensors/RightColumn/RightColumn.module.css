@@ -1,103 +1,121 @@
+/* RightColumn.module.css
+   Stylesheet for the RightColumn component. */
+
 .container {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-  
-  .card {
-    padding: 5px;
-    border-radius: 12px;
-    box-shadow: none !important;
-    height: 100%;
-  }
-  
-  .waterHeat {
-    background-color: #F9E5E7 !important; /* Fondo rosa */
-  }
-  
-  .valves {
-    background-color: #DAE6F0 !important; /* Fondo azul */
-    
-  }
-  
-  .header {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 8px;
-  }
-  
-  .icon {
-    font-size: 24px;
-  }
-  
-  .redIcon {
-    color: #d32f2f; /* Rojo para Water Heat */
-  }
-  
-  .blueIcon {
-    color: #1976d2; /* Azul para Valves */
-  }
-  
-  .title {
-    font-size: 16px;
-    font-weight: bold;
-  }
-  
-  .redText {
-    color: #d32f2f; /* Rojo para Water Heat */
-  }
-  
-  .blueText {
-    color: #1976d2; /* Azul para Valves */
-  }
-  
-  .temperature {
-    font-size: 32px;
-    font-weight: bold;
-    color: #d32f2f; /* Rojo */
-    margin-bottom: 8px;
-  }
-  
-  .statsRow {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 8px;
-  }
-  
-  .label {
-    font-size: 14px;
-    color: #333333;
-  }
-  
-  .graphLabel {
-    font-size: 14px;
-    font-weight: bold;
-    color: #1976d2; /* Azul */
-    text-align: center;
-    margin-bottom: 8px;
-  }
-  
-  .graphPlaceholder {
-    height: 60px;
-    background-color: #bbdefb; /* Azul claro */
-    border-radius: 8px;
-    margin-bottom: 8px;
-  }
-  
-  .linksRow {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .manualLink {
-    font-size: 14px;
-    color: #333333;
-  }
-  
-  .settingsLink {
-    font-size: 14px;
-    color: #388e3c; /* Verde */
-    font-weight: bold;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-radius: 12px;
+  box-shadow: none !important;
+  height: 100%;
+}
+
+.waterHeat {
+  background-color: #f9e5e7 !important;
+}
+
+.valves {
+  background-color: #dae6f0 !important;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+}
+
+.icon {
+  font-size: 20px !important;
+}
+
+.redIcon {
+  color: #9b1017;
+}
+
+.blueIcon {
+  color: #10279b;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: bold !important;
+}
+
+.redText {
+  color: #9b1017;
+  font-size: 1rem !important;
+  font-weight: bold;
+}
+
+.blueText {
+  color: #10279b;
+}
+
+.temperature {
+  font-size: 2rem !important;
+  font-weight: bold !important;
+  color: #9b1017;
+  margin-bottom: 8px;
+}
+
+.statsRowOne {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.statsRow {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.linksRow {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.manualLink {
+  font-size: 14px;
+  color: #333333;
+}
+
+.settingsLink {
+  font-size: 14px;
+  color: #123512 !important;
+  font-weight: 500 !important;
+  text-decoration: underline !important;
+}
+
+.values {
+  width: 70%;
+  justify-content: space-around;
+  display: flex;
+  flex-direction: row !important;
+}
+
+.valueBox {
+  display: inline-block;
+  background-color: white;
+  padding: 1px 6px;
+  border-radius: 4px;
+  margin-left: 4px;
+  font-weight: bold;
+  box-shadow: none;
+}

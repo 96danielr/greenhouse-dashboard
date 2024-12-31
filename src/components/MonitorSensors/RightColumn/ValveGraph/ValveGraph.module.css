@@ -1,0 +1,14 @@
+/* ValveGraph.module.css
+   Stylesheet for the ValveGraph component. */
+
+   .graphPlaceholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+  }
+  
+  svg {
+    max-width: 100%;
+    height: auto;
+  }

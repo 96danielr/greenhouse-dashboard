@@ -1,52 +1,76 @@
+// RightColumn.jsx
 import React from "react";
 import { Card, CardContent, Typography, Box, Link } from "@mui/material";
-import ThermostatOutlinedIcon from '@mui/icons-material/ThermostatOutlined';
-import PlumbingIcon from "@mui/icons-material/Plumbing"; // Ícono para Valves
+import ThermostatOutlinedIcon from "@mui/icons-material/ThermostatOutlined";
+import PlumbingIcon from "@mui/icons-material/Plumbing";
 import styles from "./RightColumn.module.css";
+import ValveGraph from "./ValveGraph/ValveGraph";
 
-const RightColumn = () => {
+/**
+ * RightColumn component
+ * 
+ * Displays sections for "Water Heat" and "Valves" with respective data and actions.
+ * 
+ * Props:
+ * - waterHeat (object): Contains `current`, `min`, and `max` temperatures for water heat.
+ */
+const RightColumn = ({ waterHeat }) => {
   return (
     <Box className={styles.container}>
-      {/* Sección Water Heat */}
       <Card className={`${styles.card} ${styles.waterHeat}`}>
-        <CardContent>
-          <Box className={styles.header}>
-            <ThermostatOutlinedIcon  className={`${styles.icon} ${styles.redIcon}`} />
-            <Typography className={`${styles.title} ${styles.redText}`}>
-              Water Heat
-            </Typography>
+        <CardContent className={styles.header}>
+          <Box className={styles.content}>
+            <Box className={styles.statsRowOne}>
+              <ThermostatOutlinedIcon className={`${styles.icon} ${styles.redIcon}`} />
+              <Typography className={`${styles.title} ${styles.redText}`}>
+                Water Heat
+              </Typography>
+            </Box>
+            <Box className={styles.statsRow}>
+              <Typography className={styles.temperature}>
+                {waterHeat.current}°
+              </Typography>
+              <Box className={styles.linksRow}>
+                <Box className={styles.values}>
+                  <Typography>
+                    Min
+                    <Box className={styles.valueBox}>{waterHeat.min}°</Box>
+                  </Typography>
+                  <Typography>
+                    Max
+                    <Box className={styles.valueBox}>{waterHeat.max}°</Box>
+                  </Typography>
+                </Box>
+                <Link href="#" underline="hover" className={styles.settingsLink}>
+                  Settings
+                </Link>
+              </Box>
+            </Box>
           </Box>
-          <Typography className={styles.temperature}>12°</Typography>
-          <Box className={styles.statsRow}>
-            <Typography className={styles.label}>Min</Typography>
-            <Typography className={styles.label}>Max</Typography>
-          </Box>
-          <Link href="#" underline="hover" className={styles.settingsLink}>
-            Settings
-          </Link>
         </CardContent>
       </Card>
-
-      {/* Sección Valves */}
       <Card className={`${styles.card} ${styles.valves}`}>
-        <CardContent>
-          <Box className={styles.header}>
-            <PlumbingIcon className={`${styles.icon} ${styles.blueIcon}`} />
-            <Typography className={`${styles.title} ${styles.blueText}`}>
-              Valves
-            </Typography>
-          </Box>
-          <Typography className={styles.graphLabel}>G.H</Typography>
-          <Box className={styles.graphPlaceholder}>
-            {/* Aquí puedes insertar un gráfico o diseño de válvulas */}
-          </Box>
-          <Box className={styles.linksRow}>
-            <Link href="#" underline="hover" className={styles.manualLink}>
-              Manual
-            </Link>
-            <Link href="#" underline="hover" className={styles.settingsLink}>
-              Settings
-            </Link>
+        <CardContent className={styles.header}>
+          <Box className={styles.content}>
+            <Box className={styles.statsRowOne}>
+              <PlumbingIcon className={`${styles.icon} ${styles.blueIcon}`} />
+              <Typography className={`${styles.title} ${styles.blueText}`}>
+                Valves
+              </Typography>
+            </Box>
+            <Box className={styles.statsRow}>
+              <Box className={styles.graphPlaceholder}>
+                <ValveGraph />
+              </Box>
+              <Box className={styles.linksRow}>
+                <Link href="#" underline="hover" className={styles.settingsLink}>
+                  Manual
+                </Link>
+                <Link href="#" underline="hover" className={styles.settingsLink}>
+                  Settings
+                </Link>
+              </Box>
+            </Box>
           </Box>
         </CardContent>
       </Card>

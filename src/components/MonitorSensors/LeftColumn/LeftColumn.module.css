@@ -28,25 +28,25 @@
   }
   
   .icon {
-    font-size: 18px;
-    color: #1e8449; /* Verde oscuro */
+    font-size: 20px !important;
+    color: #138248; /* Verde oscuro */
   }
   
   .title {
-    font-size: 16px;
-    font-weight: bold;
-    color: #1e8449;
+    font-size: 1rem !important;
+    font-weight: bold !important;
+    color: #138248;
   }
   
   .label {
-    font-size: 14px;
-    color: #1e8449;
+    font-size: 1rem !important;
+    color: #000000;
   }
   
   .value {
-    font-size: 14px;
+    font-size: 1rem !important;
     font-weight: bold;
-    color: #1e8449;
+    color: #000000;
   }
   
   .link {

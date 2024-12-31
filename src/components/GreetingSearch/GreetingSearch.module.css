@@ -1,4 +1,7 @@
-.greetingRow {
+/* GreetingSearch.module.css
+   Stylesheet for the GreetingSearch component. */
+
+   .greetingRow {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -7,19 +10,19 @@
   
   .greeting {
     text-align: left;
+    color: #2A4B87;
   }
   
   .greeting h1 {
     font-size: 2rem;
     margin: 0;
-    color: #1A1A60;
+    color: #1a1a60;
     font-weight: bold;
   }
   
   .search {
     width: 500px;
   }
-  
   
   @media (max-width: 1200px) {
     .greetingRow {
@@ -28,7 +31,7 @@
     }
   
     .greeting {
-        color:  #2A4B87;
+      color: #2a4b87;
       text-align: center;
       margin-bottom: 16px;
       align-items: center;
@@ -43,4 +46,3 @@
       margin-top: 16px;
     }
   }
-  

@@ -1,3 +1,13 @@
+/**
+ * QuickSettings.jsx
+ * 
+ * Component for displaying quick program settings. This includes a toggle switch
+ * for enabling or disabling features and a link to navigate to the settings page.
+ * 
+ * Props:
+ * - None
+ */
+
 import React from "react";
 import { Card, CardContent, Typography, Switch, Link } from "@mui/material";
 import EastIcon from "@mui/icons-material/East";

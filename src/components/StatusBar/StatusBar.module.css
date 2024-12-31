@@ -1,66 +1,68 @@
-.statusBar {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: #ffffff;
-  padding: 20px 24px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  flex-wrap: wrap;
-  gap: 16px;
-  box-shadow: none;
+/* StatusBar.module.css
+   Stylesheet for the StatusBar component. */
+
+   .statusBar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px 24px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 16px;
+    box-shadow: none;
+  }
   
-}
-
-.status {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  font-size: 16px;
-  font-weight: 600;
-  color: #2c306f;
-}
-
-.icon {
-  font-size: 34px !important;
-}
-
-.count {
-  font-size: 14px;
-  font-weight: 700;
-  border-radius: 8px;
-  padding: 4px 12px;
-  color: #ffffff;
-  text-align: center;
-  min-width: 24px;
-}
-
-@media (max-width: 768px) {
-  .statusBar {
-    justify-content: center;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-  }
-
   .status {
-    width: 100%;
-    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c306f;
   }
-}
-
-@media (max-width: 480px) {
-  .count {
-    font-size: 12px;
-    padding: 4px 8px;
-  }
-
+  
   .icon {
-    font-size: 28px !important;
+    font-size: 34px !important;
   }
-
-  .status {
+  
+  .count {
     font-size: 14px;
+    font-weight: 700;
+    border-radius: 8px;
+    padding: 4px 12px;
+    color: #ffffff;
+    text-align: center;
+    min-width: 24px;
   }
-}
+  
+  @media (max-width: 768px) {
+    .statusBar {
+      justify-content: center;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+  
+    .status {
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .count {
+      font-size: 12px;
+      padding: 4px 8px;
+    }
+  
+    .icon {
+      font-size: 28px !important;
+    }
+  
+    .status {
+      font-size: 14px;
+    }
+  }
+  

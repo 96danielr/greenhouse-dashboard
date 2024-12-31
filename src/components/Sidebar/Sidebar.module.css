@@ -1,53 +1,47 @@
-/* Estilo para la barra lateral */
-.sidebar {
-  color: #1A1A60;
-  
-  width: 350px;
-  background-color: #ffffff;
-  padding: 16px;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-  padding-top: 150px; /* Aumentar espacio superior */
-  transition: transform 0.3s ease-in-out;
-  transform: translateX(-100%);
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  z-index: 1000;
-  display: flex;
-  font-weight: bold !important;
-  flex-direction: column; /* Asegura que los elementos estén en columna */
-  justify-content: space-between; /* Deja espacio entre secciones */
-}
-
-/* Cuando el Sidebar está abierto */
-.sidebarOpen {
-  transform: translateX(0);
-}
-
-/* Estilo base para los íconos y textos */
-.MuiListItemText-root {
-  color: #1A1A60;
- 
-}
-
-.MuiSvgIcon-root {
-  color: #1A1A60;
-}
-
-/* Efecto hover */
-.MuiListItem-root:hover .MuiListItemText-root {
-  color: #3F52EF;
-}
-
-.MuiListItem-root:hover .MuiSvgIcon-root {
-  color: #3F52EF;
-}
-
-/* Responsive: en pantallas más pequeñas */
-@media (max-width: 968px) {
-  .sidebar {
-    width: 80%;
-    max-width: 300px; /* Ajusta si prefieres un máximo */
+/* Sidebar.module.css
+   Stylesheet for the Sidebar component. */
+   .sidebar {
+    color: #1a1a60;
+    width: 260px;
+    background-color: #ffffff;
+    padding: 16px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    padding-top: 150px;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
-}
+  
+  .sidebarOpen {
+    transform: translateX(0);
+  }
+  
+  .MuiListItemText-root {
+    color: #1a1a60;
+  }
+  
+  .MuiSvgIcon-root {
+    color: #1a1a60;
+  }
+  
+  .MuiListItem-root:hover .MuiListItemText-root {
+    color: #3f52ef;
+  }
+  
+  .MuiListItem-root:hover .MuiSvgIcon-root {
+    color: #3f52ef;
+  }
+  
+  @media (max-width: 968px) {
+    .sidebar {
+      width: 80%;
+      max-width: 300px;
+    }
+  }

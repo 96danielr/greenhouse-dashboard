@@ -1,3 +1,4 @@
+// FarmsList.jsx
 import React from "react";
 import {
   Card,
@@ -12,11 +13,21 @@ import GrassIcon from "@mui/icons-material/Grass";
 import LocalFloristIcon from "@mui/icons-material/LocalFlorist";
 import NaturePeopleIcon from "@mui/icons-material/NaturePeople";
 import SpaIcon from "@mui/icons-material/Spa";
-import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-import InfoIcon from "@mui/icons-material/Info";
+import CheckCircleOutlineOutlinedIcon from "@mui/icons-material/CheckCircleOutlineOutlined";
+import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import ErrorOutlineIcon from "@mui/icons-material/ErrorOutline";
 import styles from "./FarmsList.module.css";
 
+/**
+ * FarmsList component
+ * 
+ * Displays a list of farms with their status. Each farm is represented by an icon,
+ * its name, and a status icon that indicates whether the farm is active, delayed,
+ * or has an error.
+ * 
+ * Props:
+ * - farms (array): List of farm objects with `name` and `status` properties.
+ */
 const farmIcons = [
   AgricultureIcon,
   GrassIcon,
@@ -41,9 +52,9 @@ const FarmsList = ({ farms }) => {
           {farms.map((farm, index) => {
             const stateIcon =
               farm.status === "Active" ? (
-                <CheckCircleIcon className={styles.stateIcon} />
+                <CheckCircleOutlineOutlinedIcon className={styles.stateIcon} />
               ) : farm.status === "On delay" ? (
-                <InfoIcon className={styles.stateIcon} />
+                <InfoOutlinedIcon className={styles.stateIcon} />
               ) : (
                 <ErrorOutlineIcon className={styles.stateIcon} />
               );
@@ -58,7 +69,7 @@ const FarmsList = ({ farms }) => {
                   alignItems: "center",
                 }}
               >
-                <div style={{ display: "flex", alignItems: "start"}}>
+                <div style={{ display: "flex", alignItems: "start" }}>
                   <ListItemIcon className={styles.icon}>
                     {getRandomIcon()}
                   </ListItemIcon>

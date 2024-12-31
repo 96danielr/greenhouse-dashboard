@@ -1,9 +1,21 @@
-// ./components/StatusBar/StatusBar.jsx
+/**
+ * StatusBar.jsx
+ * 
+ * A component that displays a dynamic status bar with labeled statuses and counts.
+ * Each status is represented by an icon, a label, and a count, with dynamic styling based on the status.
+ * 
+ * Props:
+ * - statuses (Array): Array of status objects. Each object includes:
+ *   - label (string): Name of the status.
+ *   - color (string): Color associated with the status.
+ *   - count (number): Count of items in the status.
+ */
+
 import React from "react";
 import styles from "./StatusBar.module.css";
-import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import CheckCircleOutlineOutlinedIcon from "@mui/icons-material/CheckCircleOutlineOutlined";
 import ErrorOutlineIcon from "@mui/icons-material/ErrorOutline";
-import InfoIcon from "@mui/icons-material/Info";
+import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import { Box, Typography } from "@mui/material";
 
 const StatusBar = ({ statuses }) => {
@@ -11,9 +23,8 @@ const StatusBar = ({ statuses }) => {
     <Box className={styles.statusBar}>
       {statuses.map((status, index) => (
         <Box key={index} className={styles.status}>
-          {/* Iconos dinámicos según el label */}
           {status.label === "Active" && (
-            <CheckCircleIcon
+            <CheckCircleOutlineOutlinedIcon
               className={styles.icon}
               style={{ color: status.color }}
             />
@@ -25,10 +36,14 @@ const StatusBar = ({ statuses }) => {
             />
           )}
           {status.label === "On delay" && (
-            <InfoIcon className={styles.icon} style={{ color: status.color }} />
+            <InfoOutlinedIcon
+              className={styles.icon}
+              style={{ color: status.color }}
+            />
           )}
-          {/* Texto y conteo */}
-          <Typography variant="body2"  style={{ fontWeight: 700 }}>{status.label}</Typography>
+          <Typography variant="body2" style={{ fontWeight: 700 }}>
+            {status.label}
+          </Typography>
           <Box className={styles.count} sx={{ backgroundColor: status.color }}>
             {status.count}
           </Box>

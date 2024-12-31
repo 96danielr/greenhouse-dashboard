@@ -1,46 +1,75 @@
-.card {
-  border-radius: 8px;
-  background-color: #ffffff;
-  padding: 16px;
-  box-shadow: none !important;
-}
+/* MonitorSensors.module.css
+   Stylesheet for the MonitorSensors component. */
 
-.sensorGroup {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  border-radius: 8px;
-  padding: 16px;
-}
-.title {
-  font-size: 1rem !important;
-  font-weight: bold !important;
-  color: #171C4B !important;
-  margin-bottom: 15px !important;
-}
-
-.sensorItem {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 8px;
-  border-radius: 8px;
-  background-color: #ffffff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.sensorName {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.icon {
-  font-size: 18px;
-}
-
-.stat {
-  font-weight: bold;
-  font-size: 16px;
-  color: #333333;
-}
+   .card {
+    border-radius: 8px;
+    background-color: #ffffff;
+    padding: 16px;
+    box-shadow: none !important;
+  }
+  
+  .sensorGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-radius: 8px;
+    padding: 16px;
+  }
+  
+  .title {
+    font-size: 1rem !important;
+    font-weight: bold !important;
+    color: #171C4B !important;
+    margin-bottom: 15px !important;
+  }
+  
+  .sensorItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sensorName {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .icon {
+    font-size: 18px;
+  }
+  
+  .stat {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333333;
+  }
+  
+  @media (max-width: 768px) {
+    .card {
+      padding: 12px;
+    }
+  
+    .title {
+      font-size: 0.9rem;
+    }
+  
+    .sensorItem {
+      padding: 8px;
+      flex-direction: column;
+      gap: 12px;
+    }
+  
+    .sensorName {
+      justify-content: center;
+    }
+  
+    .stat {
+      font-size: 14px;
+    }
+  }
+  

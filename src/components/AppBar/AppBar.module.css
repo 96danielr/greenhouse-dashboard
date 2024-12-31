@@ -1,16 +1,17 @@
+/* AppBar.module.css
+   Stylesheet for the AppBar component. */
 .toolbar {
-    background-color: #ffffff; 
-    color: white;
-    padding: 25px;
-    z-index: 1200; 
-  }
-  
-  .title {
-    font-weight: bolder;
-    color: #000000; 
-  }
-    
-  .button {
-    text-transform: uppercase;
-  }
-  
+  background-color: #ffffff;
+  color: white;
+  padding: 25px;
+  z-index: 1200;
+}
+
+.title {
+  font-weight: bolder;
+  color: #000000;
+}
+
+.button {
+  text-transform: uppercase;
+}

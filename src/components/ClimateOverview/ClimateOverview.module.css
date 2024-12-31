@@ -1,64 +1,105 @@
-.card {
-  padding: 16px;
-  border-radius: 18px;
-  background-color: #ffffff;
-  height: 100%;
-  border: none !important;
-  box-shadow: none !important;
+/* ClimateOverview.module.css
+   Stylesheet for the ClimateOverview component. */
 
-}
+   .card {
+    padding: 16px;
+    border-radius: 18px;
+    background-color: #ffffff;
+    height: 100%;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  
+  .content {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border: none !important;
+    box-shadow: none !important;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 12px;
+    }
+  }
+  
+  .title {
+    font-size: 1rem !important;
+    font-weight: bold !important;
+    color: #171c4b !important;
+    margin-bottom: 15px !important;
+    @media (max-width: 768px) {
+      font-size: 0.9rem;
+    }
+  }
+  
+  .iconBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    background-color: #fdd866;
+    border-radius: 12px;
+    padding: 16px;
+    @media (max-width: 768px) {
+      padding: 12px;
+    }
+  }
+  
+  .iconBoxTwo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    background-color: #fdd866;
+    border-radius: 12px;
+    padding: 16px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 350px;
+    @media (max-width: 768px) {
+      max-width: 100%;
+    }
+  }
+  
+  .icon {
+    font-size: 3rem !important;
+    color: #1976d2;
+    @media (max-width: 768px) {
+      font-size: 2.5rem;
+    }
+  }
+  
+  .text {
+    font-size: 1rem !important;
+    color: #2a4b87;
+    font-weight: bold !important;
+    @media (max-width: 768px) {
+      font-size: 0.9rem;
+    }
+  }
 
-.content {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  border: none !important;  
-
-}
-.title{
-  font-size: 1rem !important;
-  font-weight: bold !important;
-  color: #171C4B !important;
-  margin-bottom: 15px !important;
-}
-.iconBox {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  background-color: #ffeb3b;
-  border-radius: 12px;
-  padding: 16px;
-}
-.iconBoxTwo {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 8px;
-  background-color: #ffeb3b;
-  border-radius: 12px;
-  padding: 16px;
-  font-size: 1rem;
-}
-
-.icon {
-  font-size: 1rem !important;
-  color: #1976d2;
-}
-
-.text {
-  font-size: 1rem !important;
-  color: #070C3F;
-}
-
-.stat {
-  font-size: 1rem !important;
-  font-weight: 600;
-  color: #333;
-}
-
-.graph {
-  flex: 1;
-  height: 150px;
-  min-width: 250px; /* Garantiza que el gráfico tenga un ancho mínimo */
-}
+  .wattsLabel {
+    font-size: 1rem !important;
+    font-weight: bold !important;
+    color: #ffffff
+  }
+  
+  .stat {
+    font-size: 2rem !important;
+    font-weight: bold !important;
+    color: #fff;
+    @media (max-width: 768px) {
+      font-size: 0.9rem;
+    }
+  }
+  
+  .graph {
+    flex: 1;
+    height: 150px;
+    min-width: 250px;
+    @media (max-width: 768px) {
+      height: 120px;
+      min-width: 100%;
+    }
+  }
+  

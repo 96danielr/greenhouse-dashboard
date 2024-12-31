@@ -6,7 +6,7 @@
 }
 
 .icon {
-  font-size: 24px;
+  font-size: 20px !important;
   margin-right: 0px;
   color: #2A4B87;
   transition: color 0.3s ease;
@@ -16,7 +16,7 @@
   font-size: 1rem !important;
   font-weight: bold !important;
   color: #171C4B !important;
-  margin-bottom: 15px !important;
+  margin-bottom: 5px !important;
 }
 
 .name {
@@ -47,7 +47,7 @@
 }
 
 .listItem {
-  padding: 8px 16px;
+  padding: 0px 1px;
   display: flex;
   align-items: center;
   justify-content: space-between;

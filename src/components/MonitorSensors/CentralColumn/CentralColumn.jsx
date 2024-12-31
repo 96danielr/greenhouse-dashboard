@@ -1,11 +1,19 @@
 import React from "react";
 import { Card, CardContent, Typography, Box } from "@mui/material";
-import WbSunnyIcon from "@mui/icons-material/WbSunny"; // Ícono para Meteo
-import OpacityIcon from "@mui/icons-material/Opacity"; // Ícono para Irrigation Unit
-import InputIcon from "@mui/icons-material/Input"; // Ícono para Inputs
-import EventIcon from "@mui/icons-material/Event"; // Ícono para Events
+import WbSunnyIcon from "@mui/icons-material/WbSunny";
+import OpacityIcon from "@mui/icons-material/Opacity";
+import InputIcon from "@mui/icons-material/Input";
+import EventIcon from "@mui/icons-material/Event";
 import styles from "./CentralColumn.module.css";
 
+/**
+ * CentralColumn Component
+ * 
+ * This component displays statistics in two columns, with each stat represented by an icon, title, 
+ * and value. A divider separates the columns.
+ * 
+ * @returns {JSX.Element} Rendered CentralColumn component.
+ */
 const CentralColumn = () => {
   const stats = [
     { icon: <WbSunnyIcon className={styles.icon} />, title: "Meteo", value: "102x" },
@@ -16,44 +24,37 @@ const CentralColumn = () => {
 
   return (
     <Card className={styles.card}>
-      <CardContent>
-        <Box className={styles.container}>
-          {/* Columna izquierda */}
-          <Box className={styles.column}>
-            {stats.slice(0, 2).map((stat, index) => (
-              <Box key={index} className={styles.statBox}>
-                <Box className={styles.titleRow}>
-                  {stat.icon}
-                  <Typography className={styles.title}>{stat.title}</Typography>
-                </Box>
-                <Box className={styles.valueRow}>
-                  <Typography className={styles.label}>Main Stat</Typography>
-                  <Typography className={styles.value}>{stat.value}</Typography>
-                </Box>
+      <Box className={styles.container}>
+        <Box className={styles.column}>
+          {stats.slice(0, 2).map((stat, index) => (
+            <Box key={index} className={styles.statBox}>
+              <Box className={styles.titleRow}>
+                {stat.icon}
+                <Typography className={styles.title}>{stat.title}</Typography>
               </Box>
-            ))}
-          </Box>
-
-          {/* Línea divisoria */}
-          <Box className={styles.divider}></Box>
-
-          {/* Columna derecha */}
-          <Box className={styles.column}>
-            {stats.slice(2).map((stat, index) => (
-              <Box key={index} className={styles.statBox}>
-                <Box className={styles.titleRow}>
-                  {stat.icon}
-                  <Typography className={styles.title}>{stat.title}</Typography>
-                </Box>
-                <Box className={styles.valueRow}>
-                  <Typography className={styles.label}>Main Stat</Typography>
-                  <Typography className={styles.value}>{stat.value}</Typography>
-                </Box>
+              <Box className={styles.valueRow}>
+                <Typography className={styles.label}>Main Stat</Typography>
+                <Typography className={styles.value}>{stat.value}</Typography>
               </Box>
-            ))}
-          </Box>
+            </Box>
+          ))}
         </Box>
-      </CardContent>
+        <Box className={styles.divider}></Box>
+        <Box className={styles.column}>
+          {stats.slice(2).map((stat, index) => (
+            <Box key={index} className={styles.statBox}>
+              <Box className={styles.titleRow}>
+                {stat.icon}
+                <Typography className={styles.title}>{stat.title}</Typography>
+              </Box>
+              <Box className={styles.valueRow}>
+                <Typography className={styles.label}>Main Stat</Typography>
+                <Typography className={styles.value}>{stat.value}</Typography>
+              </Box>
+            </Box>
+          ))}
+        </Box>
+      </Box>
     </Card>
   );
 };

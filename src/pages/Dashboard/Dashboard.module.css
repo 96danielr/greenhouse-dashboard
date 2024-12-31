@@ -1,71 +1,64 @@
-    .dashboard {
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      padding-top: 100px;
-      background-color: #F8F1FF;
-    }
-
-    /* Contenedor para sidebar y main */
-    .container {
-      display: flex;
-      flex: 1;
-      position: relative;
-    }
-
-    /* MAIN */
+/* Dashboard.module.css
+   Stylesheet for the Dashboard component. */
+   .dashboard {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 80px;
+    background-color: #f8f1ff;
+  }
+  
+  .container {
+    display: flex;
+    flex: 1;
+    position: relative;
+    height: 100%;
+  }
+  
+  .main {
+    flex: 1;
+    padding: 30px;
+    margin-left: 0;
+    transition: margin-left 0.3s ease-in-out;
+  }
+  
+  .mainShift {
+    margin-left: 300px;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-bottom: 16px;
+  }
+  
+  .greeting h1 {
+    margin: 0;
+  }
+  
+  .search {
+    width: 250px;
+  }
+  
+  .card {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 16px;
+  }
+  
+  @media (max-width: 1200px) {
     .main {
-      flex: 1;
-      padding: 30px; /* Padding por defecto */
-      margin-left: 0;
-      transition: margin-left 0.3s ease-in-out;
+      padding: 30px;
     }
-
     .mainShift {
-      margin-left: 350px;
+      margin-left: 0;
     }
-
-    /* Fila del "Hi Elsa" + SearchBar */
-    .row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 16px;
-      align-items: stretch;
+  }
+  
+  @media (min-width: 1200px) {
+    .main {
+      padding: 40px;
     }
-
-
-
-    .greeting h1 {
-      margin: 0;
-    }
-
-    .search {
-      width: 250px;
-    }
-
-    .card {
-      background-color: #fff;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-      padding: 16px;
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 1200px) {
-      .main {
-        padding: 30px; /* Padding reducido en móviles */
-      }
-      
-      .mainShift {
-        margin-left: 0;
-      }
-    }
-
-    @media (min-width: 1200px) {
-      .main {
-        padding: 40px; /* Más padding en pantallas grandes */
-      }
-    }
-
-    
+  }

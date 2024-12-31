@@ -1,287 +1,179 @@
-.card {
-  padding: 16px;
-  border-radius: 18px;
-  background-color: #ffffff;
-  
-  border: none;
-  box-shadow: none !important;
- 
-}
-
-.content {
-  display: flex;
-  flex-direction: row;
-  gap: 16px;
-
-  /* Cambio a columna en pantallas pequeñas */
-  @media (max-width: 768px) {
-    flex-direction: column;
+/* FertiOverview.module.css
+   Stylesheet for the FertiOverview component. */
+   .card {
+    padding: 16px;
+    border-radius: 18px;
+    background-color: #ffffff;
+    border: none !important;
+    box-shadow: none !important;
   }
-}
-
-.title {
-  font-size: 1rem !important;
-  font-weight: bold !important;
-  color: #171C4B !important;
-  margin-bottom: 15px !important;
-}
-
-.nextFertilizations {
-  display: flex;
-  flex-direction: column;
-  background-color: #8CDDAF; /* Verde claro */
-  border-radius: 12px;
- 
-  flex: 1;
-}
-
-.sectionTitle {
-  font-size: 1rem !important;
-  font-weight: bold !important;
-  color: #ffffff;
-  margin-bottom: 6px !important;
-  text-align: left; /* Alineado a la izquierda */
-}
-
-.datesContainer {
-  display: flex;
-  justify-content: space-between;
-  gap: 8px;
-  position: relative; /* Para usar líneas verticales */
-}
-
-.dateBox {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-  flex: 1;
-  position: relative; /* Para la línea separadora */
-}
-
-.dateBox:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 2.5px;
-  background-color: #ffffff; /* Línea vertical blanca */
-}
-
-
-
-.day {
-  font-size: 1.3rem !important; /* Texto más grande */
-  font-weight: bold !important;
-  color: #ffffff;
-}
-
-.fertilizerStock {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  flex: 1;
-}
-
-.stockContainer {
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 16px;
-  height: 120px; /* Altura total del contenedor */
-}
-
-.mainLine {
-  position: absolute;
-  bottom: 0;
-  left: 20px;
-  right: 0;
-  height: 1px;
-  background-color: #000; /* Línea principal negra */
-}
-
-.tankContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  border: 2px solid; /* Dinámico desde el JSX */
-}
-
-.connector {
-  width: 1px;
-  height: 20px;
-  background-color: #000; /* Línea negra que conecta el tanque */
-}
-
-.tank {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  width: 40px;
-  height: 100px;
-  border-radius: 4px;
-  background-color: #ffffff; /* Fondo blanco */
-}
-
-.fill {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  border-radius: 4px 4px 0 0; /* Bordes redondeados en la parte superior */
-}
-
-.card {
-  padding: 16px;
-  border-radius: 18px;
-  background-color: #ffffff;
-  height: 100%;
-  border: none;
-  box-shadow: none !important;
-}
-
-.content {
-  display: flex;
-  flex-direction: row;
-  gap: 16px;
-
-  /* Cambio a columna en pantallas pequeñas */
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
-}
-
-.nextFertilizations {
-  display: flex;
-  flex-direction: column;
-  background-color: #8CDDAF; /* Verde claro */
-  border-radius: 12px;
-  padding: 16px;
-  flex: 1;
-  max-width: 600px;
-}
-
-.sectionTitle {
-  font-size: 18px !important;
-  font-weight: bold !important;
-  color: #ffffff;
-  margin-bottom: 6px !important;
-  text-align: left; /* Alineado a la izquierda */
-}
-
-.datesContainer {
-  display: flex;
-  justify-content: space-between;
-  gap: 8px;
-  position: relative; /* Para usar líneas verticales */
-}
-
-.dateBox {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
-  flex: 1;
-  position: relative; /* Para la línea separadora */
-}
-
-.dateBox:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 2.5px;
-  background-color: #ffffff; /* Línea vertical blanca */
-}
-
-.month {
-  font-size: 1.1rem !important; /* Texto más grande */
-  font-weight: bold;
-  color: #ffffff;
-}
-
-.day {
-  font-size: 1.9rem !important; /* Texto más grande */
-  font-weight: bold !important;
-  color: #ffffff;
-}
-
-.sectionTitle2{
-  color : #8CDDAF;
-  font-size: 1rem !important;
-  font-weight: bold !important;
-}
-
-.fertilizerStock {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  flex: 1;
-}
-
-.stockContainer {
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 16px;
-  height: 120px; /* Altura total del contenedor */
   
-}
-
-.mainLine {
-  position: absolute;
-  bottom: 0;
-  left: 20px;
-  right: 0;
-  height: 1px;
-  background-color: #000; /* Línea principal negra */
-}
-
-.tankContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  border: none; 
-}
-
-.connector {
-  width: 1px;
-  height: 20px;
-  background-color: #000; /* Línea negra que conecta el tanque */
-}
-
-.tank {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  width: 40px;
-  height: 100px;
-  border: 2px solid; /* Dinámico desde el JSX */
-  border-radius: 8px;
-  background-color: #ffffff; /* Fondo blanco */
-}
-
-.fill {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  border-radius: 4px 4px 0 0; /* Bordes redondeados en la parte superior */
-}
-
-.label {
-  position: absolute;
-  writing-mode: vertical-rl; /* Texto en orientación vertical */
-  transform: rotate(180deg); /* Volteamos el texto */
-  text-align: center;
-  font-size: 12px !important;
-  font-weight: 500 !important;
-  color: #1e2150; /* Azul oscuro */
-  line-height: 1.2;
-}
+  .content {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 12px;
+    }
+  }
+  
+  .title {
+    font-size: 1rem !important;
+    font-weight: bold !important;
+    color: #171c4b !important;
+    margin-bottom: 15px !important;
+  }
+  
+  .nextFertilizations {
+    display: flex;
+    flex-direction: column;
+    background-color: #8cddaf;
+    border-radius: 12px;
+    flex: 1;
+    padding: 16px;
+    max-width: 600px;
+    @media (max-width: 768px) {
+      max-width: 100%;
+      padding: 12px;
+    }
+  }
+  
+  .sectionTitle {
+    font-size: 18px !important;
+    font-weight: bold !important;
+    color: #ffffff;
+    margin-bottom: 6px !important;
+    text-align: left;
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
+  }
+  
+  .datesContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    position: relative;
+  }
+  
+  .dateBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    flex: 1;
+    position: relative;
+  }
+  
+  .dateBox:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 2.5px;
+    background-color: #ffffff;
+  }
+  
+  .month {
+    font-size: 1.1rem !important;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  .day {
+    font-size: 1.9rem !important;
+    font-weight: bold !important;
+    color: #ffffff;
+  }
+  
+  .sectionTitle2 {
+    color: #8cddaf;
+    font-size: 1rem !important;
+    font-weight: bold !important;
+  }
+  
+  .fertilizerStock {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex: 1;
+  }
+  
+  .stockContainer {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 16px;
+    height: 120px;
+    @media (max-width: 768px) {
+      gap: 8px;
+      height: 100px;
+    }
+  }
+  
+  .mainLine {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    right: 0;
+    height: 1px;
+    background-color: #000;
+  }
+  
+  .tankContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border: none;
+  }
+  
+  .connector {
+    width: 1px;
+    height: 20px;
+    background-color: #000;
+  }
+  
+  .tank {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 40px;
+    height: 100px;
+    border: 2px solid;
+    border-radius: 8px;
+    background-color: #ffffff;
+    @media (max-width: 768px) {
+      width: 30px;
+      height: 80px;
+    }
+  }
+  
+  .fill {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-radius: 4px 4px 0 0;
+    @media (max-width: 768px) {
+      border-radius: 2px 2px 0 0;
+    }
+  }
+  
+  .label {
+    position: absolute;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-align: center;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    color: #1e2150;
+    line-height: 1.2;
+    @media (max-width: 768px) {
+      font-size: 10px !important;
+    }
+  }
+  

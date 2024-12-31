@@ -1,59 +1,61 @@
-.searchBar {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+/* SearchBar.module.css
+   Stylesheet for the SearchBar component. */
 
-  padding: 8px 12px;
-  border-radius: 32px;
-}
-
-.input {
-  flex: 1;
-  border-radius: 28px;
-  background-color: white;
-  border: none;
-  padding: 12px 20px;
-  font-size: 16px;
-  box-shadow: none;
-  height: 54px;
-}
-.input::placeholder {
-  color: #1A1A60 !important; /* Cambia el color */
-  display: flex;
-  align-items: center;
-  font-size: 16px;
-  line-height: 54px; /* Centrado vertical */
-}
-
-.input:focus {
-  outline: none;
-  box-shadow: 0 0 4px rgba(100, 100, 250, 0.4);
-}
-
-.button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #1A1A60;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  cursor: pointer;
-}
-
-.button:hover {
-  transform: scale(1.1);
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
-}
-
-.button:focus {
-  outline: none;
-}
-
-.button-icon {
-  font-size: 20px;
-}
+   .searchBar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 12px;
+    border-radius: 32px;
+  }
+  
+  .input {
+    flex: 1;
+    border-radius: 28px;
+    background-color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    box-shadow: none;
+    height: 54px;
+  }
+  
+  .input::placeholder {
+    color: #1A1A60 !important;
+    font-size: 16px;
+    line-height: 54px;
+  }
+  
+  .input:focus {
+    outline: none;
+    box-shadow: 0 0 4px rgba(100, 100, 250, 0.4);
+  }
+  
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1A1A60;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .button:focus {
+    outline: none;
+  }
+  
+  .button-icon {
+    font-size: 20px;
+  }
+  

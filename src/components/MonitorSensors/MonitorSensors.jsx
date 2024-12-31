@@ -1,92 +1,39 @@
+// MonitorSensors.jsx
 import React from "react";
-import { Card, CardContent, Typography, Grid, Box } from "@mui/material";
-import SensorItem from "./SensorItem/SensorItem";
-import styles from "./MonitorSensors.module.css";
+import { Card, Typography, Grid } from "@mui/material";
 import LeftColumn from "./LeftColumn/LeftColumn";
 import CentralColumn from "./CentralColumn/CentralColumn";
 import RightColumn from "./RightColumn/RightColumn";
+import styles from "./MonitorSensors.module.css";
 
-// Datos de los sensores
-
-const sensorsRight = [
-  { name: "Meteo", stat: "Main Stat", color: "#ffe6a5", icon: "🌦️" },
-  { name: "Irrigation Unit", stat: "Main Stat", color: "#ffe6a5", icon: "💧" },
-  { name: "Inputs", stat: "Main Stat", color: "#ffe6a5", icon: "📥" },
-  { name: "Events", stat: "Main Stat", color: "#ffe6a5", icon: "📅" },
-];
-
-const waterHeat = {
-  name: "Water Heat",
-  stat: "12°",
-  color: "#ffcccb",
-  extra: "Min   Max",
-  icon: "🔥",
-};
-
-const valves = {
-  name: "Valves",
-  stat: "Manual",
-  color: "#d9eaf5",
-  extra: "G.H",
-  icon: "🔧",
-};
-
+/**
+ * MonitorSensors component
+ * 
+ * Displays sensor data in three columns: left, central, and right. Each column
+ * contains data specific to a category of sensors. The layout adapts to different
+ * screen sizes for improved user experience.
+ * 
+ * Props:
+ * - sensors (object): Contains data for left, central, and right columns.
+ */
 const MonitorSensors = ({ sensors }) => {
   return (
     <Card className={styles.card}>
-    <Typography variant="h6" className={styles.title}>
-      Monitor Sensors
-    </Typography>
-    <Grid container spacing={2} style={{ display: "flex", alignItems: "stretch" }}>
-      {/* Columna Izquierda */}
-      <Grid
-        item
-        xs={12}
-        md={12}
-        lg={3}
-        style={{
-          display: "flex",
-          flexDirection: "column",
-        }}
-      >
-        <div style={{ flexGrow: 1 }}>
+      <Typography variant="h6" className={styles.title}>
+        Monitor Sensors
+      </Typography>
+      <Grid container spacing={2} sx={{ display: "flex", alignItems: "stretch" }}>
+        <Grid item xs={12} md={12} lg={3} sx={{ display: "flex", flexDirection: "column" }}>
           <LeftColumn sensors={sensors.left} />
-        </div>
-      </Grid>
-  
-      {/* Columna Central */}
-      <Grid
-        item
-        xs={12}
-        md={6}
-        lg={5}
-        style={{
-          display: "flex",
-          flexDirection: "column",
-        }}
-      >
-        <div style={{ flexGrow: 1 }}>
+        </Grid>
+        <Grid item xs={12} md={6} lg={5} sx={{ display: "flex", flexDirection: "column" }}>
           <CentralColumn />
-        </div>
+        </Grid>
+        <Grid item xs={12} md={6} lg={4} sx={{ display: "flex", flexDirection: "column" }}>
+          <RightColumn waterHeat={sensors.waterHeat} valves={sensors.valves} />
+        </Grid>
       </Grid>
-  
-      {/* Columna Derecha */}
-      <Grid
-        item
-        xs={12}
-        md={6}
-        lg={4}
-        style={{
-          display: "flex",
-          flexDirection: "column",
-        }}
-      >
-        <div style={{ flexGrow: 1 }}>
-          <RightColumn />
-        </div>
-      </Grid>
-    </Grid>
-  </Card>
+    </Card>
   );
 };
 
