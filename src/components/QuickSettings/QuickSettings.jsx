@@ -8,12 +8,29 @@
  * - None
  */
 
-import React from "react";
+import React, { useState } from "react";
 import { Card, CardContent, Typography, Switch, Link } from "@mui/material";
 import EastIcon from "@mui/icons-material/East";
 import styles from "./QuickSettings.module.css";
+import SettingsPopup from "../SettingsPopup/SettingsPopup";
 
 const QuickSettings = () => {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [isToggled, setIsToggled] = useState(false);
+
+  const openDialog = () => setIsDialogOpen(true);
+  const closeDialog = () => setIsDialogOpen(false);
+
+  const handleToggle = () => {
+    setIsToggled(!isToggled);
+    console.log(`Toggle is now: ${!isToggled ? "ON" : "OFF"}`);
+    if (!isToggled) {
+      console.log("Activating automatic irrigation system...");
+    } else {
+      console.log("Deactivating irrigation system. Manual operation enabled.");
+    }
+  };
+
   return (
     <Card className={styles.card}>
       <CardContent>
@@ -23,6 +40,8 @@ const QuickSettings = () => {
         <div className={styles.switchContainer}>
           <Typography>Group Start</Typography>
           <Switch
+            checked={isToggled}
+            onChange={handleToggle}
             sx={{
               "& .MuiSwitch-switchBase.Mui-checked": {
                 color: "#3F52EF",
@@ -37,12 +56,14 @@ const QuickSettings = () => {
           />
         </div>
         <div className={styles.linkContainer}>
-          <Link href="#" underline="none" className={styles.linkText}>
+          <Link href="#" underline="none" className={styles.linkText} onClick={openDialog}>
             Settings
           </Link>
           <EastIcon className={styles.arrowIcon} />
         </div>
       </CardContent>
+
+      <SettingsPopup open={isDialogOpen} onClose={closeDialog} />
     </Card>
   );
 };

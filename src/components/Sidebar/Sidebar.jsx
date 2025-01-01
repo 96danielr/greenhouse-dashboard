@@ -17,6 +17,7 @@ import styles from "./Sidebar.module.css";
  * Props:
  * - isOpen (boolean): Determines whether the sidebar is visible or hidden.
  */
+
 const Sidebar = ({ isOpen }) => {
   return (
     <aside
@@ -24,26 +25,26 @@ const Sidebar = ({ isOpen }) => {
     >
       <div>
         <List>
-          <ListItem button>
-            <ListItemIcon>
+          <ListItem button className={styles.dashboard}>
+            <ListItemIcon className={styles.sidebarItemIcon}>
               <DashboardOutlinedIcon />
             </ListItemIcon>
             <ListItemText primary="Dashboard" />
           </ListItem>
           <ListItem button>
-            <ListItemIcon>
+            <ListItemIcon className={styles.sidebarItemIcon}>
               <AccountCircleOutlinedIcon />
             </ListItemIcon>
             <ListItemText primary="Profile" />
           </ListItem>
           <ListItem button>
-            <ListItemIcon>
+            <ListItemIcon className={styles.sidebarItemIcon}>
               <SettingsOutlinedIcon />
             </ListItemIcon>
             <ListItemText primary="Parameters" />
           </ListItem>
           <ListItem button>
-            <ListItemIcon>
+            <ListItemIcon className={styles.sidebarItemIcon}>
               <ContactSupportOutlinedIcon />
             </ListItemIcon>
             <ListItemText primary="Contact" />

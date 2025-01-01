@@ -11,6 +11,7 @@ Features Overview
 - Sidebar Toggle: Expand and collapse the sidebar to customize the view.
 - Mock Data Integration: Dashboard is populated with realistic mock data generated using Faker.js.
 - Interactive Elements:
+  - IA Assistant 
   - Toggles for activating and deactivating features.
   - Interactive buttons and settings for real-time adjustments.
 
@@ -24,7 +25,7 @@ Setup Instructions
 Follow these steps to set up and run the project locally:
 
 1. Clone the repository:
-   git clone https://github.com/yourusername/greenhouse-dashboard.git
+   git clone https://github.com/96danielr/greenhouse-dashboard.git
    cd greenhouse-dashboard
 
 2. Install the dependencies:
@@ -48,12 +49,7 @@ This repository contains:
 - The live version of this dashboard is hosted using Vercel:  
   Greenhouse Dashboard Live Demo: https://greenhouse-dashboard.vercel.app
 
-Best Practices Followed
-- Clean Code: Modular and well-documented React components.
-- Semantic HTML: Accessibility standards are considered throughout the project.
-- Responsive Design: Ensures usability across various devices.
-- Scalable Styling: Organized using SCSS Modules for maintainability.
-- Reusable Structures: Shared components and logic.
+
 
 Future Enhancements
 - Authentication System: Add user roles and login functionality.
@@ -61,6 +57,6 @@ Future Enhancements
 - Dark Mode: Implement a dark mode toggle for better usability.
 
 License
-This project is open-source and available under the MIT License.
+This project is open-source.
 
-Feel free to use, modify, and share this project. Happy coding! 😊
+
