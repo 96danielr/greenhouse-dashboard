@@ -56,11 +56,11 @@
   
   .divider {
     height: 1px;
-    background-color: #a3e4d7; /* Línea divisoria */
+    background-color: #a3e4d7; 
     margin: 8px 0;
   }
   
   .switch {
-    margin-left: auto; /* Alinea el switch completamente a la derecha */
+    margin-left: auto;
   }
   

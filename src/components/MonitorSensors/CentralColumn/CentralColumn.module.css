@@ -1,7 +1,7 @@
 .card {
   padding: 16px;
   border-radius: 12px;
-  background-color: #FFE5BF !important; /* Orange background */
+  background-color: #FFE5BF !important; 
   border: none;
   box-shadow: none !important;
   height: 100%;
@@ -10,7 +10,7 @@
 .container {
   display: flex;
   gap: 16px;
-  background-color: #FFE5BF !important; /* Orange background */
+  background-color: #FFE5BF !important; 
   height: 100%;
   align-items: start;
 }
@@ -19,7 +19,7 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  flex: 1; /* Ensures equal column width */
+  flex: 1; 
   height: 100%;
 }
 
@@ -28,7 +28,7 @@
   flex-direction: column;
   justify-content: start;
   padding: 8px;
-  background-color: #FFE5BF !important; /* Orange background */
+  background-color: #FFE5BF !important; 
   border-radius: 8px;
   box-shadow: none;
   height: 100%;
@@ -36,13 +36,13 @@
 
 .titleRow {
   display: flex;
-  align-items: center; /* Align icon and text vertically */
-  gap: 8px; /* Spacing between icon and title */
+  align-items: center; 
+  gap: 8px; 
   margin-bottom: 20px !important;
 }
 
 .icon {
-  color: #CC9A0F; /* Icon color */
+  color: #CC9A0F; 
   font-size: 20px !important;
 }
 
@@ -56,7 +56,7 @@
   font-size: 1rem !important;
   display: flex;
   justify-content: space-between;
-  align-items: center; /* Align text */
+  align-items: center; 
 }
 
 .label {
@@ -74,6 +74,6 @@
 /* Divider line */
 .divider {
   width: 1.5px;
-  background-color: #CC9A0F; /* Divider color */
-  height: 100%; /* Full height of container */
+  background-color: #CC9A0F; 
+  height: 100%; 
 }
