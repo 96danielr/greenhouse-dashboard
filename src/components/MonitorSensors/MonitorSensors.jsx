@@ -27,7 +27,8 @@ const MonitorSensors = ({ sensors }) => {
           <LeftColumn sensors={sensors.left} />
         </Grid>
         <Grid item xs={12} md={6} lg={5} sx={{ display: "flex", flexDirection: "column" }}>
-          <CentralColumn />
+        <CentralColumn values={sensors.centralColumnStats} />
+
         </Grid>
         <Grid item xs={12} md={6} lg={4} sx={{ display: "flex", flexDirection: "column" }}>
           <RightColumn waterHeat={sensors.waterHeat} valves={sensors.valves} />

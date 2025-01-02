@@ -19,6 +19,7 @@ function Dashboard() {
   const [data, setData] = useState(null);
   const [showPopup, setShowPopup] = useState(false);
   const [summary, setSummary] = useState("");
+  
 
   useEffect(() => {
     const getSummary = async () => {
@@ -53,8 +54,8 @@ function Dashboard() {
       <div className={styles.container}>
         <Sidebar isOpen={sidebarOpen} />
         <main className={`${styles.main} ${sidebarOpen ? styles.mainShift : ""}`}>
-          <GreetingSearch user={data.user} />
-          <StatusBar
+        <GreetingSearch user={data.user} data={data} />
+        <StatusBar
             statuses={[
               {
                 label: "Active",

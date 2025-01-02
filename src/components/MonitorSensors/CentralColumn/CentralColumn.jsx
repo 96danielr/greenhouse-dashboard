@@ -1,11 +1,10 @@
 import React from "react";
-import { Card, CardContent, Typography, Box } from "@mui/material";
+import { Card, Box, Typography } from "@mui/material";
 import WbSunnyIcon from "@mui/icons-material/WbSunny";
 import OpacityIcon from "@mui/icons-material/Opacity";
 import InputIcon from "@mui/icons-material/Input";
 import EventIcon from "@mui/icons-material/Event";
 import styles from "./CentralColumn.module.css";
-
 /**
  * CentralColumn Component
  * 
@@ -14,12 +13,12 @@ import styles from "./CentralColumn.module.css";
  * 
  * @returns {JSX.Element} Rendered CentralColumn component.
  */
-const CentralColumn = () => {
+const CentralColumn = ({ values }) => {
   const stats = [
-    { icon: <WbSunnyIcon className={styles.icon} />, title: "Meteo", value: "102x" },
-    { icon: <OpacityIcon className={styles.icon} />, title: "Irrigation Unit", value: "102x" },
-    { icon: <InputIcon className={styles.icon} />, title: "Inputs", value: "102x" },
-    { icon: <EventIcon className={styles.icon} />, title: "Events", value: "102x" },
+    { icon: <WbSunnyIcon className={styles.icon} />, title: "Meteo", value: values[0] },
+    { icon: <OpacityIcon className={styles.icon} />, title: "Irrigation Unit", value: values[1] },
+    { icon: <InputIcon className={styles.icon} />, title: "Inputs", value: values[2] },
+    { icon: <EventIcon className={styles.icon} />, title: "Events", value: values[3] },
   ];
 
   return (
