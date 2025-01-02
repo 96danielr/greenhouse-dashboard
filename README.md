@@ -46,8 +46,8 @@ This repository contains:
   - deploy-setup: Branch prepared for deployment.
 
 2. Deployed Version
-- The live version of this dashboard is hosted using Vercel:  
-  Greenhouse Dashboard Live Demo: https://greenhouse-dashboard.vercel.app
+- The live version of this dashboard is hosted using Vercel
+
 
 
 
@@ -57,6 +57,6 @@ Future Enhancements
 - Dark Mode: Implement a dark mode toggle for better usability.
 
 License
-This project is open-source.
+Daniel Rodriguez.
 
 
